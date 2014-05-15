@@ -18,8 +18,14 @@
 @implementation HomeViewController
 
 
+
 - (void)viewDidLoad
 {
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"firstTime"] == NULL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Terms and Conditions" message:@"With a tap on the Accept button you accept the Terms and Conditions stated on this link: http://www.apple.com/legal/internet-services/itunes/appstore/dev/stdeula/." delegate:self cancelButtonTitle:@"Reject" otherButtonTitles:@"Accept", nil];
+        [alert show];
+        [[NSUserDefaults standardUserDefaults] setValue:@"Not" forKey:@"firstTime"];
+    }
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"superBar"] forBarMetrics:UIBarMetricsDefault];
     
     [self loadObjects];
@@ -79,6 +85,21 @@
 }
 
 
+- (IBAction)inappropriate:(id)sender
+{
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    NSArray *arrrr = [[NSArray alloc] initWithObjects:@"m-4-rco@hotmail.com", nil];
+    [controller setToRecipients:arrrr];
+    [controller setSubject:@"Inappropriate Content Report!"];
+    [controller setMessageBody:@"Inappropriate content with objectID:xAbCMrvND3." isHTML:NO];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

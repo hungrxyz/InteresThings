@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface HomeViewController : PFQueryTableViewController <UITabBarControllerDelegate>
+
+@interface HomeViewController : PFQueryTableViewController <UITabBarControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @end

@@ -8,6 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "LogInViewController.h"
+#import "TermsAndConditionsViewController.h"
 
 
 @interface SettingsTableViewController ()
@@ -46,24 +47,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"staticCell";
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"Sign out";
+    } else if (indexPath.section == 1) {
+        cell.textLabel.text = @"Terms and Conditions";
     }
-    cell.textLabel.text = @"Sign out";
-    
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [PFUser logOut];
+    if (indexPath.section == 0) {
+        [PFUser logOut];
     
-    LogInViewController *loger = [self.storyboard instantiateViewControllerWithIdentifier:@"logar"];
-    [self presentViewController:loger animated:YES completion:nil];
+        LogInViewController *loger = [self.storyboard instantiateViewControllerWithIdentifier:@"logar"];
+        [self presentViewController:loger animated:YES completion:nil];
+    } else if (indexPath.section == 1) {
+        TermsAndConditionsViewController *termič = [self.storyboard instantiateViewControllerWithIdentifier:@"termič"];
+        [self presentViewController:termič animated:YES completion:nil];
+    }
 }
 
 

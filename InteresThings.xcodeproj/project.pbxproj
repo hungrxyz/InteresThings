@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA0E381C1863571C00053766 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0E381B1863571C00053766 /* CameraViewController.m */; };
 		AA1CDAC2186E24640064E1F0 /* signUpBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = AA1CDAC1186E24640064E1F0 /* signUpBackplate.png */; };
+		AA1CF91E19245DF50004AB14 /* TermsAndConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1CF91D19245DF50004AB14 /* TermsAndConditionsViewController.m */; };
 		AA2783C21880A1C900A947E7 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2783C11880A1C900A947E7 /* Annotation.m */; };
 		AA30BA19190085E500D9E439 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA30BA18190085E500D9E439 /* AVFoundation.framework */; };
 		AA30BA1C1901E4BD00D9E439 /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA30BA1B1901E4BD00D9E439 /* UploadViewController.m */; };
@@ -73,6 +74,8 @@
 		AA0E381A1863571C00053766 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		AA0E381B1863571C00053766 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		AA1CDAC1186E24640064E1F0 /* signUpBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpBackplate.png; sourceTree = "<group>"; };
+		AA1CF91C19245DF50004AB14 /* TermsAndConditionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsViewController.h; sourceTree = "<group>"; };
+		AA1CF91D19245DF50004AB14 /* TermsAndConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsViewController.m; sourceTree = "<group>"; };
 		AA2783C01880A1C900A947E7 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		AA2783C11880A1C900A947E7 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		AA30BA18190085E500D9E439 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -304,6 +307,8 @@
 				AA4368C91912B3EE00ECC191 /* DetailExploreViewController.m */,
 				AAD038B81912DBA900292092 /* SettingsTableViewController.h */,
 				AAD038B91912DBA900292092 /* SettingsTableViewController.m */,
+				AA1CF91C19245DF50004AB14 /* TermsAndConditionsViewController.h */,
+				AA1CF91D19245DF50004AB14 /* TermsAndConditionsViewController.m */,
 				AAE9547B186661B300AEF501 /* LogIn/SignUp */,
 			);
 			name = "View Controllers";
@@ -453,6 +458,7 @@
 				AAE843771862243F00CFAD6E /* HomeViewController.m in Sources */,
 				AAAF59C51875906600346F0C /* TPKeyboardAvoidingScrollView.m in Sources */,
 				AAF18CA8190EF59600BB22A8 /* TabBarViewController.m in Sources */,
+				AA1CF91E19245DF50004AB14 /* TermsAndConditionsViewController.m in Sources */,
 				AA64A640191D3E9A00F54116 /* NavigatorViewController.m in Sources */,
 				AA4368CA1912B3EE00ECC191 /* DetailExploreViewController.m in Sources */,
 				AAEFEA8E1870B75200EE8F94 /* SignUpViewController.m in Sources */,
